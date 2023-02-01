@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sign in page</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      button {
+        padding: 5px;
+        width: 200px;
+        height: 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input {
+        border-radius: 3px;
+        padding: 3px 3px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br />
+    <table>
+      <tr>
+        <td>
+          <font size="15px"
+            ><h4 style="text-align: center">Create User</h4></font
+          >
+          <%- include("D:/MarnStack/mongodbPractice/views/componentes/form.ejs") %>
+          <br /><br /><br />
+        </td>
+        <td>
+          <h2 style="text-align: center">User List</h2>
+          <table style="border: 1px black solid">
+            <!-- List all Record -->
+            <tr style="border: 1px black solid">
+              <th style="border: 1px black solid">id</th>
+              <th style="border: 1px black solid">FirstName</th>
+              <th style="border: 1px black solid">LastName</th>
+              <th style="border: 1px black solid">Age</th>
+              <th style="border: 1px black solid">Email</th>
+              <th style="border: 1px black solid">oprations</th>
+            </tr>
+            <%data.map((item,index)=>{%>
+            <tr style="border: 1px black solid">
+              <td style="border: 1px black solid"><%= item._id %></td>
+              <td style="border: 1px black solid"><%= item.firstName %></td>
+              <td style="border: 1px black solid"><%= item.lastName %></td>
+              <td style="border: 1px black solid"><%= item.age %></td>
+              <td style="border: 1px black solid"><%= item.email %></td>
+              <td style="border: 1px black solid">
+                <a href="/delete?delEmail=<%= item.email%>">delete</a>
+                <a href="/update?uEmail=<%= item.email%>">update</a>
+              </td>
+            </tr>
+            <%}) %>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

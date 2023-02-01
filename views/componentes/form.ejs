@@ -1,0 +1,56 @@
+<form action="/" method="post">
+    <br />
+    <p>First Name:</p>
+    <input
+      required
+      value="<%= userRecord.firstName%>"
+      type="text"
+      name="firstName"
+      placeholder="Enter First name"
+      style="width: 350px; height: 30px"
+    />
+    <br />
+    <p>Last Name:</p>
+    <input
+      required
+      value="<%= userRecord.lastName %>"
+      type="text"
+      name="lastName"
+      placeholder="Enter Last name"
+      style="width: 350px; height: 30px"
+    />
+    <br />
+    <p>age:</p>
+    <input
+      required
+      value="<%= userRecord.age %>"
+      type="number"
+      name="age"
+      placeholder="Enter your age"
+      style="width: 350px; height: 30px"
+    />
+    <br />
+    <p>Password:</p>
+    <input
+      required
+      value="<%= userRecord.password %>"
+      type="password"
+      name="password"
+      placeholder="Enter your password"
+      style="width: 350px; height: 30px"
+    />
+    <br />
+    <p>Email:</p>
+    <input
+      required
+      value="<%= userRecord.email %>"
+      type="email"
+      name="email"
+      placeholder="Enter your email"
+      style="width: 350px; height: 30px"
+    />
+    <br /><br />
+    <center>
+      <button type="submit">Submit</button>
+    </center>
+  </form>
